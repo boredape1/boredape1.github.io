@@ -106,3 +106,37 @@ h1 {
     font-family: 'Arial', sans-serif;
     color: #333;
 }
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: auto;
+    }
+
+    .navbar::after {
+        height: 1px;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .menu-item {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .submenu {
+        top: 0;
+        column-count: 1;
+        column-gap: 0;
+    }
+
+    .navbar-image {
+        margin: 10px auto;
+    }
+
+    .container img {
+        max-width: 100%;
+    }
+}
