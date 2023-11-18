@@ -1,12 +1,94 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4; /* Set your desired background color */
 }
+
+.navbar {
+    background-color: #ffffff;
+    color: #000000;
+    padding: -20px;
+    text-align: center;
+    position: relative;
+    height: 50px; /* Adjust the overall height */
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Adjust the height of the gradient as needed */
+    background: linear-gradient(to right, #ffffff, #cccccc);
+}
+
+.navbar-image {
+    max-width: 190px; /* Adjust the maximum width as needed */
+    height: auto;
+    display: block;
+    margin: 0px 20px 20px 0px; /* Add right margin to shift the menu to the right */
+    margin: 5px 10px; /* Add margin to the top and bottom */
+}
+
+
+.menu-list {
+    list-style-type: none;
+    display: flex;
+    margin: 20px 80px 20px 20px; /* Add right margin to shift the menu to the right */
+}
+
+.menu-item {
+    margin-right: 20px;
+    position: relative;
+    z-index: 1; /* Add this line to set a stacking order for the menu items */
+}
+
+.menu-item a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 1em; /* Adjust the font size */
+    font-family: 'Arial', sans-serif; /* Adjust the font type */
+    
+}
+
+
+.submenu {
+    display: none;
+    top: 100%; /* Adjust the distance from the main menu item */
+    position: absolute;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 2; /* Add this line to bring the submenu to the front */
+    text-align: left; /* Align submenu text to the left */
+    column-count: 3; /* Specify the number of columns */
+    column-gap: 20px; /* Adjust the gap between columns */
+    padding-top: 30px; /* Add padding to the top to create a buffer zone */
+    
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu a {
+    padding: 10px;
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px solid transparent; /* Add a transparent border for the underline effect */
+}
+
+.submenu a:hover {
+    border-bottom-color: #d856567e; /* Change the border color on hover for the underline effect */
+
+}
+
 
 .container {
     text-align: center;
@@ -16,38 +98,11 @@ body {
 img {
     max-width: 20%;
     height: auto;
-    display: block; /* Center the image */
-    margin: 0 auto; /* Center the image horizontally */
+    display: block;
+    margin: 0 auto;
 }
 
 h1 {
     font-family: 'Arial', sans-serif;
-    color: #333; /* Set your desired text color */
-}
-
-.eyes-container {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.eye {
-    width: 20px;
-    height: 20px;
-    background-color: #000;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 5px;
-    animation: blink 2s infinite alternate; /* Blink animation */
-}
-
-.left-eye {
-    animation-delay: 0.5s; /* Delay for the left eye */
-}
-
-@keyframes blink {
-    to {
-        height: 5px;
-    }
+    color: #333;
 }
