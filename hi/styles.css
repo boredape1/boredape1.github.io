@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; /* Set your desired background color */
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+img {
+    max-width: 20%;
+    height: auto;
+    display: block; /* Center the image */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Set your desired text color */
+}
+
+.eyes-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.eye {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    animation: blink 2s infinite alternate; /* Blink animation */
+}
+
+.left-eye {
+    animation-delay: 0.5s; /* Delay for the left eye */
+}
+
+@keyframes blink {
+    to {
+        height: 5px;
+    }
+}
